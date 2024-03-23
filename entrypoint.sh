@@ -17,4 +17,4 @@ comment_response=$(curl -sX POST -H "Authorization: token $GITHUB_TOKEN" \
     =d "{\"body\":\"### PR -#$pull_request_number. \n ### Thank you for this contribution! \n ![GIF]($git_url)} \"
     "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$pull_request_number/comments")
 
-comment_url=$(echo "$comment_response" | jq --raw-output .html_url)
+# comment_url=$(echo "$comment_response" | jq --raw-output .html_url)
